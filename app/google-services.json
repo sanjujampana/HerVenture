@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "61083624102",
+    "firebase_url": "https://herventure-63bc3.firebaseio.com",
+    "project_id": "herventure-63bc3",
+    "storage_bucket": "herventure-63bc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61083624102:android:dcd066600ca2c519",
+        "android_client_info": {
+          "package_name": "com.example.snacktrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61083624102-2hoj55j0q5v80gniii0o6o837sae6ff2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.snacktrack",
+            "certificate_hash": "7cfa8d83e7c95e0661895789c237d41f23a600ac"
+          }
+        },
+        {
+          "client_id": "61083624102-lldr83onvuetkbpp358fkau2l6dm4v1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCulNbCeusNdfL-AbThEfOgDTe_QFjEa6Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61083624102-lldr83onvuetkbpp358fkau2l6dm4v1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
