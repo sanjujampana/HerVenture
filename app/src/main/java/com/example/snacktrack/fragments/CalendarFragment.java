@@ -6,13 +6,13 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
 
-public class SecretFragment extends Fragment {
+public class CalendarFragment extends Fragment {
     // The onCreateView method is called when Fragment should create its View object hierarchy,
     // either dynamically or via XML layout inflation.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         // Defines the xml file for the fragment
-        return inflater.inflate(R.layout.secret_fragment, null);
+        return inflater.inflate(R.layout.calendar_fragment, null);
     }
 
     // This event is triggered soon after onCreateView().

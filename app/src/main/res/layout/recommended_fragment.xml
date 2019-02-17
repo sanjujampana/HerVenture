@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/lightPink"
-    tools:context="com.example.snacktrack.fragments.CalendarFragment">
+    tools:context="com.example.snacktrack.fragments.RecommendedFragment">
 
     <TextView
         android:id="@+id/textView2"
@@ -18,7 +18,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="This is the secret page"
+        android:text="This is the recommended page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

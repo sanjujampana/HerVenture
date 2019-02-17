@@ -1,9 +1,8 @@
 package com.example.snacktrack;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,11 +11,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.graphics.Typeface;
-import android.widget.TextView;
+import android.support.v4.app.FragmentTransaction;
+
+import com.example.snacktrack.fragments.CalendarFragment;
+import com.example.snacktrack.fragments.ForumFragment;
+import com.example.snacktrack.fragments.RecommendedFragment;
+import com.example.snacktrack.fragments.ResourceFragment;
+import com.example.snacktrack.fragments.SecretFragment;
+import com.example.snacktrack.fragments.ScannerFragment;
+import com.example.snacktrack.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+
+    implements
+        MainFragment.OnFragmentInteractionListener,
+        SecretFragment.OnFragmentInteractionListener,
+        CalendarFragment.OnFragmentInteractionListener,
+        ForumFragment.OnFragmentInteractionListener,
+        RecommendedFragment.OnFragmentInteractionListener,
+        ResourceFragment.OnFragmentInteractionListener,
+        ScannerFragment.OnFragmentInteractionListener,
+        NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +49,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //NOTE:  Checks first item in the navigation drawer initially
+        navigationView.setCheckedItem(R.id.mainFrame);
+
+        //NOTE:  Open fragment1 initially.
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.mainFrame, new MainFragment());
+        ft.commit();
     }
 
     @Override
@@ -72,24 +96,43 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment = null;
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_calendar) {
+            fragment = new CalendarFragment();
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_resume) {
+            fragment = new ScannerFragment();
 
         } else if (id == R.id.nav_forum) {
+            fragment = new ForumFragment();
 
         } else if (id == R.id.nav_recommend) {
+            fragment = new RecommendedFragment();
 
         } else if (id == R.id.nav_resources) {
+            fragment = new ResourceFragment();
 
         } else if (id == R.id.nav_secret_page) {
+            fragment = new SecretFragment();
+        }
 
-
+        //NOTE: Fragment changing code
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.replace(R.id.mainFrame, fragment);
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(String title) {
+        // NOTE:  Code to replace the toolbar title based current visible fragment
+        getSupportActionBar().setTitle(title);
     }
 }
