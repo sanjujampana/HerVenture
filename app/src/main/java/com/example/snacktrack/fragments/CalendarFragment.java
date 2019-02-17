@@ -1,10 +1,14 @@
 package com.example.snacktrack.fragments;
 import android.support.v4.app.Fragment;
 import com.example.snacktrack.R;
+
 import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
+
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 public class CalendarFragment extends Fragment {
     // The onCreateView method is called when Fragment should create its View object hierarchy,

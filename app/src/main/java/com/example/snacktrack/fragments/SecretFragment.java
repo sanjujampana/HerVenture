@@ -1,10 +1,14 @@
 package com.example.snacktrack.fragments;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.Fragment;
 import com.example.snacktrack.R;
 import android.view.View;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
+import android.webkit.WebView;
+import android.widget.ImageView;
 
 public class SecretFragment extends Fragment {
     // The onCreateView method is called when Fragment should create its View object hierarchy,

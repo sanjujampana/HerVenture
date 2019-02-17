@@ -6,4 +6,7 @@
     <string name="nav_header_subtitle">Network. Connect. Empower.</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="username">apikey</string>
+    <string name="password">mbYU5SVaE2WR2YEO_p1QpITJXqXG3h15ptNjtkHXkMEV</string>
+    <string name="workspace">3bb7b4ed-cfa3-49e1-b8e7-8e9660bbcf5a</string>
 </resources>

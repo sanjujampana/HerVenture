@@ -9,9 +9,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.FragmentTransaction;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.snacktrack.fragments.CalendarFragment;
 import com.example.snacktrack.fragments.ForumFragment;
@@ -20,6 +24,7 @@ import com.example.snacktrack.fragments.ResourceFragment;
 import com.example.snacktrack.fragments.SecretFragment;
 import com.example.snacktrack.fragments.ScannerFragment;
 import com.example.snacktrack.fragments.MainFragment;
+import com.ibm.watson.developer_cloud.conversation.v1.ConversationService;
 
 public class MainActivity extends AppCompatActivity
 
